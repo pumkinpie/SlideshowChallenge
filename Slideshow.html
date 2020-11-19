@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html>
+  	<head>
+  	</head>
+	<body>
+  		<script>
+  		
+		
+   
+   let slideshow = {
+    photolist : ['apple','orange','banana','cherry','mangoes'],
+
+    currentPhotoIndex: 0,
+
+    nextPhoto: function(){
+    if(this.currentPhotoIndex < this.photolist.length - 2){ this.currentPhotoIndex++;
+        console.log(this.phtoList[this.currentPhotoIndex]); }else{ console.log('end of slideshow'); } }, prevPhoto:
+        function(){ if(this.currentPhotoIndex> 0){
+        this.currentPhotoIndex--;
+        console.log(this.photoList[this.currentPhotoIndex]);
+        }else{
+
+
+        console.log("Start of slideshow!");
+        }
+        },
+
+        getCurrentPhoto: function (){
+        return this.photoList[this.currentPhotoIndex];
+        },
+
+        playInterval: null,
+
+        play: function(){
+        let self = this;
+        this.playInterval = setInterval(function(){nextPhoto()}, 2000)
+
+        },
+
+        pause: function(){
+        let self = this;
+        clearInterval(this,playInterval);
+        }
+
+        }
+
+        slideshow.play();
+
+        
+        console.log(slideshow.photolist.length);
+
+    </script>
+  	</body>
+  </html>
